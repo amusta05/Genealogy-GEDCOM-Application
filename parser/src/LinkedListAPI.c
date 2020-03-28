@@ -92,12 +92,12 @@ void insertSorted(List *list,void *toBeAdded){
 	
     while (currNode != NULL){
 	    if (list->compare(toBeAdded, currNode->data) <= 0){   
-		     Node* newNode = initializeNode(toBeAdded);
+		         Node* newNode = initializeNode(toBeAdded);
 			 newNode->next = currNode;
 			 newNode->previous = currNode->previous;
-		     currNode->previous->next = newNode;
+		         currNode->previous->next = newNode;
 			 currNode->previous = newNode;
-		     list->length++;
+		         list->length++;
 			return;
 	    }
 	    currNode = currNode->next;
